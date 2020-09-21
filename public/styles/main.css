@@ -58,7 +58,7 @@ header button {
     outline: none;
 }
 
-header button a {
+header nav button a {
    color: white;
    font-weight: 700;
    text-decoration: none;
