@@ -50,14 +50,18 @@ header .navigation:hover {
 }
 
 header button {
-    color: white;
-    font-weight: 700;
     background-color: #c70071;
     padding: 15px;
     border-radius: 5px;
     margin-right: 5px;
     border: none;
     outline: none;
+}
+
+header button a {
+   color: white;
+   font-weight: 700;
+   text-decoration: none;
 }
 
 section#header {
