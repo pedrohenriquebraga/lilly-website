@@ -1,3 +1,8 @@
+:root {
+    --main-color: #ff0092;
+    --secondary-color: #c70071;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +14,6 @@ body {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #eceaea;
-    height: 200vh;
 }
 
 header {
@@ -22,13 +26,13 @@ header {
     height: 80px;
     width: 100%;
     margin: auto;
-    background-color: #ff0092;
+    background-color: var(--main-color);
     z-index: 100;
 }
 
 header #logo {
-    font-family: cursive;
-    font-size: 25px;
+    font-family: "Cookie" ,cursive;
+    font-size: 45px;
     margin: auto 10px;
     color: white;
     font-weight: bold;
@@ -49,8 +53,8 @@ header .navigation:hover {
     color: #f7f3f3;
 }
 
-header button {
-    background-color: #c70071;
+header a > button {
+    background-color: var(--secondary-color);
     padding: 15px;
     border-radius: 5px;
     margin-right: 5px;
@@ -58,10 +62,14 @@ header button {
     outline: none;
 }
 
-header nav button a {
+header nav a button {
    color: white;
    font-weight: 700;
    text-decoration: none;
+}
+
+header nav a button:hover {
+    border: 1px solid white;
 }
 
 section#header {
@@ -73,32 +81,42 @@ section#header {
     color: white;
     width: 100%;
     height: 90vh;
-    background-color: #c70071;
+    background-color: var(--secondary-color);
+    background: linear-gradient(var(--secondary-color), var(--main-color));
+}
+
+#header img {
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    box-shadow: 6px 2px 5px 0px #00000059;
 }
 
 #header #header_buttons {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 #header #header_buttons button {
-    background-color: #fc2ca1;
-    color: white;
+    background-color: #bb006a;
+    color: #ffffff;
+    font-weight: bold;
     border: none;
     width: 180px;
+    margin-right: 1px;
     margin-top: 10px;
     padding: 15px;
     border-radius: 5px;
     outline: none;
 
-    animation: buttons 5s infinite ease-in-out;
+    animation: buttons 6s infinite ease-in-out;
 
     transition: 200ms;
 }
 
 #header #header_buttons button:hover {
     border: 0.5px solid white ;
-    width: 210px;
+    width: 250px;
 }
+
 
 @keyframes buttons {
     0% {
