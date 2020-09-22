@@ -142,7 +142,7 @@ section#header {
 }
 
 .page_content .section_content {
-    width: 85%;
+    width: 100%;
     height: fit-content;
     margin: 1.0rem 0 8.0rem 0;
 }
