@@ -15,6 +15,7 @@ html {
 }
 
 body {
+    height: 100%;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #eceaea;
@@ -47,6 +48,16 @@ header #logo {
     animation: shake_logo 15s infinite ease-in-out;
 }
 
+header .nav_open_button {
+    display: none;
+    font-size: 20px;
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
 header .navigation {
     font-size: 1.4rem;
     color: white;
@@ -71,6 +82,10 @@ header a button {
     outline: none;
 }
 
+header nav {
+    display: block;
+}
+
 header nav a button {
    color: white;
    font-weight: 700;
@@ -80,6 +95,8 @@ header nav a button {
 header nav a button:hover {
     border: 1px solid white;
 }
+
+
 
 section#header {
     display: flex;
@@ -91,7 +108,7 @@ section#header {
     width: 100%;
     height: 90vh;
     background-color: var(--secondary-color);
-    background: linear-gradient(var(--secondary-color), var(--main-color));
+    background: linear-gradient(var(--secondary-color), #f10089);
 }
 
 #header img {
@@ -109,6 +126,7 @@ section#header {
 }
 
 #header #header_buttons button {
+    height: 5.0rem;
     background-color: #bb006a;
     color: #ffffff;
     font-weight: bold;
@@ -119,8 +137,6 @@ section#header {
     padding: 1.5rem;
     border-radius: 5px;
     outline: none;
-
-    animation: buttons 6s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
 
     transition: 200ms;
 }
@@ -135,7 +151,7 @@ section#header {
     width: 90%;
     min-width: 320px;
     height: fit-content;
-    margin: 30px auto;
+    margin: 3.0rem auto;
     padding: 5.0rem;
     background-color: #3d3d3d81;
     border-radius: 10px;
@@ -143,7 +159,7 @@ section#header {
 
 .page_content .section_content {
     width: 100%;
-    height: fit-content;
+    height: max-content;
     margin: 1.0rem 0 8.0rem 0;
 }
 
@@ -183,25 +199,31 @@ section#header {
     }
 
     #header #header_buttons button {
-        width: 280px;
+        width: 28.0rem;
     }
 }
 
-@keyframes buttons {
-    0% {
-        transform: translateY(0%);
+@media (max-width: 520px) {
+    header nav {
+        display: none;
+    } 
+
+    header .nav_open_button {
+        display: block;
     }
 
-    50% {
-        transform: translateY(50%);
-    }
-
-    75% {
-        transform: translateY(-10%);
-    }
-
-    100% {
-        transform: translateY(0%);
+    header.nav nav {
+        display: flex;
+        z-index: -1;
+        background-color: #576cb8;
+        padding: 5.0rem;
+        position: absolute;
+        width: 100%;
+        height: max-content;
+        top: 100%;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
     }
 }
 
