@@ -1,6 +1,6 @@
 @media (max-width: 800px) {
     html {
-        font-size: 55%;
+        font-size: 50%;
     }
 
     #header #header_buttons {
@@ -15,6 +15,10 @@
 }
 
 @media (max-width: 520px) {
+    html {
+        font-size: 48%;
+    }
+
     header nav {
         display: none;
     } 
@@ -45,5 +49,4 @@
         padding: 10px;
     }
 }
-
-
+ 

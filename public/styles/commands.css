@@ -128,9 +128,9 @@ header nav {
     flex-direction: column;
     color: white;
     background-color: #2a2c30;
-    width: 90%;
+    width: 95%;
     min-width: 300px;
-    max-width: 800px;
+    max-width: 1500px;
     height: 33.0rem;
     align-items: center;
     justify-content: center;
