@@ -6,11 +6,11 @@
     #header #header_buttons {
         display: flex;
         flex-direction: column;
-        width: 100%;
     }
 
     #header #header_buttons button {
-        width: 28.0rem;
+        width: 30.0rem;
+        height: 45px;
     }
 }
 
