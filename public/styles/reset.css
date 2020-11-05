@@ -1,0 +1,23 @@
+:root {
+    --main-color: #ff0092;
+    --secondary-color: #c70071;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eceaea;
+    background: url(/assets/main-background.webp) #0000005d;
+    background-blend-mode: multiply;
+}

@@ -1,0 +1,69 @@
+header {
+    position: fixed;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    height: 8.0rem;
+    width: 100%;
+    margin: auto;
+    top: 0;
+    background-color: var(--main-color);
+    z-index: 100;
+}
+
+header #logo {
+    font-family: "Cookie", cursive;
+    font-size: 4.6rem;
+    margin: auto 1.0rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+
+    animation: shake_logo 15s infinite ease-in-out;
+}
+
+header .nav_open_button {
+    display: none;
+    font-size: 2.0rem;
+    margin-right: 1.0rem;
+    color: white;
+    cursor: pointer;
+
+    transition: 200ms;
+}
+
+header .nav_open_button:hover {
+    color: #fdfdfd;
+}
+
+
+
+header .navigation {
+    font-size: 1.4rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1.5rem;
+    margin: 0.2rem;
+
+    transition: 200ms;
+}
+
+header .navigation:hover {
+    color: #ececec;
+}
+
+header a button {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    border: none;
+    outline: none;
+}
+
+header nav {
+    display: block;
+}
