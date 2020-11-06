@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://lilly-website.herokuapp.com/</loc>
+	<lastmod>2020-11-06T14:27:05+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://lilly-website.herokuapp.com/commands</loc>
+	<lastmod>2020-11-06T14:27:05+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://lilly-website.herokuapp.com/community-terms</loc>
+	<lastmod>2020-11-06T14:27:08+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://lilly-website.herokuapp.com/privacy-policy</loc>
+	<lastmod>2020-11-06T14:27:08+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+</urlset>
