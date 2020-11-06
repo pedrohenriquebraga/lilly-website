@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 
 nunjucks.configure(path.join(__dirname, "views"), {
   express: app,
-  noCache: false,
+  noCache: false
 });
 
 // Rota Principal
