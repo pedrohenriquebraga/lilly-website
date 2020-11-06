@@ -2,48 +2,18 @@
 <html lang="pt-br">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4ZSN2KQRE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    {% include "./partials/head.html" %}
+    {% include "./partials/defaultCssFiles.html" %}
 
-        gtag('config', 'G-P4ZSN2KQRE');
-    </script>
-    <script data-ad-client="ca-pub-2195308427635463" async
-        src="/scripts/adsbygoogle.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comandos da Lilly</title>
-    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/assets/apple-lilly-icon.png">
-    <link rel="canonical" href="https://lilly-website.herokuapp.com/" />
-
-    <link rel="stylesheet preload" href="/styles/reset.css">
-    <link rel="stylesheet preload" href="/styles/header.css">
-    <link rel="stylesheet preload" href="/styles/footer.css">
     <link rel="stylesheet preload" href="/styles/commands.css">
     <link rel="stylesheet preload" href="/styles/responsive.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer>
-    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet" defer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        defer>
 </head>
 
 <body>
-    <header class="">
-        <a href="/" id="logo">Lilly</a>
-        <i class="fa fa-bars nav_open_button"></i>
-        <nav>
-            <a class="navigation" href="/"><i class="fa fa-home"></i> Home</a>
-            <a class="navigation" href="/commands" rel="internal">&lt;/&gt; Comandos</a>
-            <a class="navigation" rel="external follow" target="_blank" href="/support"><i
-                    class="fa fa-support"></i> Suporte</a>
-            <a class="navigation"
-                href="https://discord.com/api/oauth2/authorize?client_id=754548334328283137&permissions=8&scope=bot"
-                rel="external nofollow" target="_blank"><i class="fa fa-plus"></i> Me Adicione!</a>
-        </nav>
-    </header>
+    {% include "./partials/header.html" %}
 
     <div class="commands">
         <h1>Veja alguns dos comandos da Lilly</h1>
@@ -56,27 +26,7 @@
         </span>
     </div>
 
-    <footer>
-        <div class="footer_section">
-            <h3>Condições e Termos de Uso</h3>
-            <a href="/community-terms" rel="internal">Termos de Uso da Comunidade</a><br>
-            <a href="/privacy-policy" rel="internal">Políticas de Privacidade</a>
-        </div>
-
-        <div class="social_networks">
-            <a href="https://github.com/pedrohenriquebraga" target="_blank" rel="external nofollow"><img
-                    src="/assets/github-icon.png" alt="Acesse meu Github"></a>
-
-            <a href="https://youtube.com/gamesantos" target="_blank" rel="external nofollow"><img
-                    src="/assets/youtube-icon.png" alt="Acesse meu canal do YouTube"></a>
-
-            <a href="https://www.instagram.com/pedro_henriquebraga/" target="_blank" rel="external nofollow"><img
-                    src="/assets/insta-icon.webp" alt="Acesse meu Instagram"></a>
-            <p>&copy; Todos os direitos reservados ao GameSantosBr e seus associados. Copyright 2020. <br> A Lilly não é associado a Discord, Inc.</p>
-        </div>
-
-    </footer>
-
+    {% include "./partials/footer.html" %}
 
     <script src="/scripts/nav_control.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"

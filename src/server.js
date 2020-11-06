@@ -1,36 +1,38 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-
+const nunjucks = require("nunjucks");
 const compression = require("compression");
 const zlib = require("zlib");
 
 const app = express();
-
-function wwwRedirect(req, res, next) {
-  if (req.headers.host.slice(0, 4) === "www.") {
-    let newHost = req.headers.host.slice(4);
-    return res.redirect(301, req.protocol + "://" + newHost + req.originalUrl);
-  } else {
-    next();
-  }
-}
-app.set("trust proxy", true);
-app.use(wwwRedirect);
 
 app.use(cors());
 app.disable("x-powered-by");
 app.use(compression({ level: 9 }));
 app.use(express.static(path.join(__dirname, "..", "public")));
 
+nunjucks.configure(path.join(__dirname, "views"), {
+  express: app,
+  noCache: true,
+});
+
 // Rota Principal
 app.get("/", (req, res) => {
-  return res.sendFile(path.join(__dirname, "views", "index.html"));
+  return res.render("index.html", {
+    title: "Lilly, um bot simples mas poderoso para o Discord",
+    desc:
+      "Venha conhecer um dos melhores e mais completos bots do Discord, que vai trazer muita mais alegria, diversão e controle do seu servidor, e o melhor, de graça!",
+  });
 });
 
 // Rota para mostrar comandos
 app.get("/commands", (req, res) => {
-  return res.sendFile(path.join(__dirname, "views", "commands.html"));
+  return res.render("commands.html", {
+    title: "Comandos da Lilly",
+    desc:
+      "Veja a lista completa de comandos da Lilly sempre atualizada e cheia de comandos realmente úteis para você!",
+  });
 });
 
 // Convite da Lilly
@@ -45,11 +47,15 @@ app.get("/support", (req, res) => {
 });
 
 app.get("/community-terms", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "communityTerms.html"));
+  return res.render("communityTerms.html", {
+    title: "Termos de uso e comunidade da Lilly",
+    desc:
+      "Aqui estão todos as regras que devem ser seguidas pela comunidade para usarem a Lilly sem corre riscos de ser punido.",
+  });
 });
 
 app.get("/privacy-policy", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "privacyPolicy.html"));
+  return res.render("privacyPolicy.html");
 });
 
 app.listen(process.env.PORT || 3000);

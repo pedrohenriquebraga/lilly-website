@@ -2,33 +2,17 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://lilly-website.herokuapp.com/" />
-    <title>Termos de uso e comunidade da Lilly</title>
+    {% include "./partials/head.html" %}
 
-    <link rel="stylesheet preload" href="/styles/reset.css">
-    <link rel="stylesheet preload" href="/styles/header.css">
+    {% include "./partials/defaultCssFiles.html" %}
+
     <link rel="stylesheet preload" href="/styles/communityTerms.css">
-    <link rel="stylesheet preload" href="/styles/footer.css">
     <link rel="stylesheet preload" href="/styles/responsive.css">
     <link rel="stylesheet preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" defer>
 </head>
 
 <body>
-    <header class="">
-        <a href="/" id="logo">Lilly</a>
-        <i class="fa fa-bars nav_open_button"></i>
-        <nav>
-            <a class="navigation" href="/"><i class="fa fa-home"></i> Home</a>
-            <a class="navigation" href="/commands" rel="internal">&lt;/&gt; Comandos</a>
-            <a class="navigation" rel="external follow" target="_blank" href="/support"><i class="fa fa-support"></i>
-                Suporte</a>
-            <a class="navigation" href="/invite" rel="external nofollow" target="_blank"><i class="fa fa-plus"></i> Me
-                Adicione!</a>
-        </nav>
-    </header>
+    {% include "./partials/header.html" %}
     <main>
         <h1>Termos de uso e comunidade da Lilly</h1>
         <section class="terms">
@@ -207,27 +191,9 @@
             </p>
         </section>
     </main>
-    <footer>
-        <div class="footer_section">
-            <h3>Condições e Termos de Uso</h3>
-            <a href="/community-terms">Termos de Uso da Comunidade</a><br>
-            <a href="/privacy-policy">Políticas de Privacidade</a>
-        </div>
 
-        <div class="social_networks">
-            <a href="https://github.com/pedrohenriquebraga" target="_blank" rel="external nofollow"><img
-                    src="/assets/github-icon.png" alt="Acesse meu Github"></a>
+    {% include "./partials/footer.html" %}
 
-            <a href="https://youtube.com/gamesantos" target="_blank" rel="external nofollow"><img
-                    src="/assets/youtube-icon.png" alt="Acesse meu canal do YouTube"></a>
-
-            <a href="https://www.instagram.com/pedro_henriquebraga/" target="_blank" rel="external nofollow"><img
-                    src="/assets/insta-icon.webp" alt="Acesse meu Instagram"></a>
-            <p>&copy; Todos os direitos reservados ao GameSantosBr e seus associados. Copyright 2020. <br> A Lilly não é
-                associado a Discord, Inc.</p>
-        </div>
-
-    </footer>
     <script src="/scripts/nav_control.js" defer></script>
 </body>
 
