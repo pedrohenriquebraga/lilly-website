@@ -49,5 +49,7 @@ footer .social_networks a {
 }
 
 footer .social_networks a img {
-    image-rendering: pixelated;
+    width: 35px;
+    height: 35px;
+    margin-top: 15px;
 }

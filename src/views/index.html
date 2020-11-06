@@ -3,7 +3,7 @@
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4ZSN2KQRE"></script>
+    <script rel="preload" as="script" src="/scripts/gtag.js" defer></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -11,8 +11,7 @@
 
         gtag('config', 'G-P4ZSN2KQRE');
     </script>
-    <script data-ad-client="ca-pub-2195308427635463" async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-2195308427635463" src="/scripts/adsbygoogle.js" defer></script>
     <meta name=”robots” content=”index, follow”>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,17 +23,15 @@
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/assets/apple-lilly-icon.png">
 
-    <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/header.css">
-    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet preload" as="style"  href="/styles/reset.css" defer>
+    <link rel="stylesheet preload" as="style" href="/styles/header.css" defer>
+    <link rel="stylesheet preload" as="style" href="/styles/footer.css" defer>
+    <link rel="stylesheet preload" as="style" href="/styles/main.css" defer>
+    <link rel="stylesheet preload" as="style" href="/styles/responsive.css" defer>
 
-    <link rel="stylesheet" href="/styles/animations.css">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link async rel="stylesheet preconnect" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer>
 
-    <link rel="stylesheet" href="/styles/responsive.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link async rel="stylesheet preload" as="style" href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" defer>
 </head>
 
 <body>
@@ -44,20 +41,20 @@
         <nav>
             <a class="navigation" href="/"><i class="fa fa-home"></i> Home</a>
             <a class="navigation" href="/commands" rel="internal">&lt;/&gt; Comandos</a>
-            <a class="navigation" rel="external follow" target="_blank" href="/support"><i class="fa fa-support"></i>
+            <a class="navigation" rel="external noreferrer" target="_blank" href="/support"><i class="fa fa-support"></i>
                 Suporte</a>
-            <a class="navigation" href="/invite" rel="external nofollow" target="_blank"><i class="fa fa-plus"></i> Me
+            <a class="navigation" href="/invite" rel="external noreferrer" target="_blank"><i class="fa fa-plus"></i> Me
                 Adicione!</a>
         </nav>
     </header>
     <section id="header">
-        <img src="/assets/avatar-lilly.jpg" alt="Foto Lilly">
+        <img loading="lazy" src="/assets/avatar-lilly.webp" width="256" height="256" alt="Foto Lilly">
         <h1>Olá, eu sou a Lilly e estou ansiosa para fazer parte do seu servidor do Discord!!</h1>
         <div id="header_buttons">
-            <a href="/invite" target="_blank" rel="external nofollow"><button><i class="fa fa-plus"></i> Me
+            <a href="/invite" target="_blank" rel="external noreferrer"><button><i class="fa fa-plus"></i> Me
                     Adicione</button></a>
 
-            <a href="/support" target="_blank" rel="external nofollow"><button style="background-color: #6274b8;"><i
+            <a href="/support" target="_blank" rel="external noreferrer"><button style="background-color: #6274b8;"><i
                         class="fa fa-support"></i> Suporte</button></a>
 
             <a href="/commands" rel="internal"><button style="background-color: #05c063;">&lt;/&gt; Meus
@@ -110,20 +107,19 @@
         </div>
 
         <div class="social_networks">
-            <a href="https://github.com/pedrohenriquebraga" target="_blank" rel="external nofollow"><img
-                    src="/assets/github-icon.png" alt="Acesse meu Github"></a>
+            <a href="https://github.com/pedrohenriquebraga" target="_blank" rel="external noreferrer"><img loading="lazy" width="30" height="30" src="/assets/github-icon.png" alt="Acesse meu Github"></a>
 
-            <a href="https://youtube.com/gamesantos" target="_blank" rel="external nofollow"><img
+            <a href="https://youtube.com/gamesantos" target="_blank" rel="external noreferrer"><img loading="lazy" width="30" height="30"
                     src="/assets/youtube-icon.png" alt="Acesse meu canal do YouTube"></a>
 
-            <a href="https://www.instagram.com/pedro_henriquebraga/" target="_blank" rel="external nofollow"><img
+            <a  href="https://www.instagram.com/pedro_henriquebraga/" target="_blank" rel="external noreferrer"><img loading="lazy" width="30" height="30"
                     src="/assets/insta-icon.webp" alt="Acesse meu Instagram"></a>
             <p>&copy; Todos os direitos reservados ao GameSantosBr e seus associados. Copyright 2020. <br> A Lilly não é
                 associado a Discord, Inc.</p>
         </div>
 
     </footer>
-    <script src="/scripts/nav_control.js"></script>
+    <script src="/scripts/nav_control.js" defer></script>
 </body>
 
 </html>

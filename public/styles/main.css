@@ -85,3 +85,18 @@ section#header {
     font-size: 2.4rem;
     margin-top: 2.0rem;
 }
+
+
+@keyframes buttons_animation {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(20%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}

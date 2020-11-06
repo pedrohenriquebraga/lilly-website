@@ -67,3 +67,22 @@ header a button {
 header nav {
     display: block;
 }
+
+
+@keyframes shake_logo {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
