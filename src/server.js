@@ -1,3 +1,4 @@
+const api = require("./services/api");
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
@@ -14,7 +15,7 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 
 nunjucks.configure(path.join(__dirname, "views"), {
   express: app,
-  noCache: true
+  noCache: true,
 });
 
 // Rota Principal
@@ -27,11 +28,16 @@ app.get("/", (req, res) => {
 });
 
 // Rota para mostrar comandos
-app.get("/commands", (req, res) => {
+app.get("/commands", async (req, res) => {
+  const commands = await api
+    .get("/commandList")
+    .then((response) => response.data);
   return res.render("commands.html", {
     title: "Comandos da Lilly",
     desc:
       "Veja a lista completa de comandos da Lilly sempre atualizada e cheia de comandos realmente úteis para você!",
+    commands: commands,
+    total: commands.length,
   });
 });
 

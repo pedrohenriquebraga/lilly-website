@@ -37,8 +37,8 @@
     display: flex;
     flex-direction: column;
     color: white;
-    background-color: rgba(0, 0, 0, 0.267);
-    width: 95%;
+    background-color: #00000044;
+    width: 70%;
     min-width: 300px;
     max-width: 1500px;
     height: 36.0rem;

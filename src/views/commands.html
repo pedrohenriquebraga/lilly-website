@@ -22,16 +22,21 @@
                     recomendado</strong> que você dê a Lilly permissão de <strong>Administrador</strong>. Certifique-se
                 de usar o prefixo certo do servidor.</em></p>
         <span class="total_commands">
-            <span>0</span> Comandos Disponíveis
+            <span>{{ total }}</span> Comandos Disponíveis
         </span>
+        {% for command in commands %}
+            <div class="command_card">
+                <h2 class="command_name">{{ command.name }}</h2>
+                <p class="command_desc">{{ command.description }}</p>
+                <span class="user_permissions"><strong>Permissões do Usuário: </strong><em>{{ command.userPermissions }}</em></span>
+                <span class="lilly_permissions"><strong>Permissões da Lilly: </strong><em>{{ command.lillyPermissions }}</em></span>
+                <span class="usage"><strong>Como usar: </strong><em>{{ command.usage }}</em></span>
+                <span class="aliases"><strong>Atalhos: </strong><em>{{ command.aliases.join(', ') }}</em></span>
+            </div>
+        {% endfor %}
     </div>
 
     {% include "./partials/footer.html" %}
 
     <script src="/scripts/nav_control.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
-        integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
-        crossorigin="anonymous"></script>
-
-    <script src="/scripts/listCommands.js"></script>
 </body>
