@@ -86,6 +86,17 @@ section#header {
     margin-top: 2.0rem;
 }
 
+@media (max-width: 800px) {
+    #header #header_buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #header #header_buttons button {
+        width: 30.0rem;
+        height: 45px;
+    }
+}
 
 @keyframes buttons_animation {
     0% {
