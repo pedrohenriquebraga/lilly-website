@@ -67,4 +67,8 @@ app.get("/privacy-policy", (req, res) => {
   return res.render("privacyPolicy.html");
 });
 
+app.get("/sitemap", (req, res) => {
+  return res.sendFile(path.join(__dirname, "views", "sitemap.xml"))
+})
+
 app.listen(process.env.PORT || 3000);
