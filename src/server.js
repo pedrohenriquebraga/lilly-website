@@ -64,7 +64,11 @@ app.get("/community-terms", (req, res) => {
 });
 
 app.get("/privacy-policy", (req, res) => {
-  return res.render("privacyPolicy.html");
+  return res.render("privacyPolicy.html", {
+    title: "Políticas de Privacidade da Lilly",
+    canon: 'https://lilly-website.herokuapp.com/privacy-policy',
+    desc: "Veja todas as políticas de privacidade e como são usados os dados enviados a Lilly.",
+  });
 });
 
 app.listen(process.env.PORT || 3000);
