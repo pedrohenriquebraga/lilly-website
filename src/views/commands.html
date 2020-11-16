@@ -15,7 +15,7 @@
 <body>
     {% include "./partials/header.html" %}
 
-    <div class="commands">
+    <section class="content">
         <h1>Veja alguns dos comandos da Lilly</h1>
         <p id="ps"><em>*No campo "<strong>como usar</strong>", tudo que tenha "<strong>?</strong>" significa que é
                 opcional, ou seja, não é obrigatório ser passado como parâmetro. É <strong>extremamente
@@ -24,17 +24,23 @@
         <span class="total_commands">
             <span>{{ total }}</span> Comandos Disponíveis
         </span>
+    </section>
+
+    <main class="commands">
+
         {% for command in commands %}
-            <div class="command_card">
-                <h2 class="command_name">{{ command.name }}</h2>
-                <p class="command_desc">{{ command.description }}</p>
-                <span class="user_permissions"><strong>Permissões do Usuário: </strong><em>{{ command.userPermissions }}</em></span>
-                <span class="lilly_permissions"><strong>Permissões da Lilly: </strong><em>{{ command.lillyPermissions }}</em></span>
-                <span class="usage"><strong>Como usar: </strong><em>{{ command.usage }}</em></span>
-                <span class="aliases"><strong>Atalhos: </strong><em>{{ command.aliases.join(', ') }}</em></span>
-            </div>
+        <div class="command_card">
+            <h2 class="command_name">{{ command.name }}</h2>
+            <p class="command_desc">{{ command.description }}</p>
+            <span class="user_permissions"><strong>Permissões do Usuário:
+                </strong><em>{{ command.userPermissions }}</em></span>
+            <span class="lilly_permissions"><strong>Permissões da Lilly:
+                </strong><em>{{ command.lillyPermissions }}</em></span>
+            <span class="usage"><strong>Como usar: </strong><em>{{ command.usage }}</em></span>
+            <span class="aliases"><strong>Atalhos: </strong><em>{{ command.aliases.join(', ') }}</em></span>
+        </div>
         {% endfor %}
-    </div>
+    </main>
 
     {% include "./partials/footer.html" %}
 

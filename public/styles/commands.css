@@ -1,3 +1,27 @@
+.content {
+    width: 75%;
+    margin: 10.0rem auto 3.0rem auto;
+    /* margin-top: 10.0rem; */
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.0rem;
+}
+
+.content #ps {
+    font-size: 1.65rem;
+    margin-bottom: 1.0rem;
+    color: #f0eeee85;
+}
+
+.content span {
+    font-size: 1.8rem;
+    color: #ff0092;
+    font-weight: 600;
+}
+
 .commands {
     display: flex;
     flex-direction: column;
@@ -5,64 +29,46 @@
     align-content: center;
     justify-content: center;
     text-align: center;
+    flex-flow: wrap;
     margin: auto;
-    margin-top: 10.0rem;
+    width: 75%;
+    min-width: 310px;
+}
     
-    width: 80%;
-    min-width: 300px;
-}
-.commands #ps {
-    font-size: 1.65rem;
-    margin-bottom: 1.0rem;
-    color: #f0eeee85;
-
-}
-.commands span {
-    font-size: 1.8rem;
-}
-
-.commands h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.0rem;
-}
-
-.commands .total_commands {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: #ff0092;
-    font-weight: 600;
-}
 
 .commands .command_card {
     display: flex;
     flex-direction: column;
     color: white;
-    background-color: #00000044;
-    width: 70%;
+    background-color: #0000005e;
+    width: 50%;
     min-width: 300px;
     max-width: 1500px;
     height: 36.0rem;
     align-items: center;
     justify-content: center;
     border-radius: 8px;
+    margin: 0.2rem;
     margin-bottom: 1.0rem;
     padding: 1.0rem;
     border: 1px solid white;
+    flex: 1;
+    
 }
 
 .commands .command_card .command_name {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     color: #576cb8;
     text-transform: capitalize;
 }
 
 .commands .command_card .command_desc {
-    font-size: 2.0rem;
+    font-size: 1.5rem;
     margin: 1.2rem 0;
 }
 
 .commands .command_card .user_permissions {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: white;
     background-color: #f50000;
     padding: 0.8rem 1.2rem;
@@ -72,7 +78,7 @@
 }
 
 .commands .command_card .lilly_permissions {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: white;
     background-color: #f50000;
     padding: 0.8rem 1.2rem;
@@ -82,7 +88,7 @@
 }
 
 .commands .command_card .usage {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     background-color: #00a352;
     color: white;
     padding: 0.8rem 1.2rem;
@@ -92,7 +98,7 @@
 }
 
 .commands .command_card .aliases {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     background-color: #00a352;
     color: white;
     padding: 0.8rem 1.2rem;
