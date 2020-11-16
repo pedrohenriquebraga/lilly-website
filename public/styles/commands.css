@@ -57,18 +57,18 @@
 }
 
 .commands .command_card .command_name {
-    font-size: 2.0rem;
+    font-size: 2.3rem;
     color: #576cb8;
     text-transform: capitalize;
 }
 
 .commands .command_card .command_desc {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin: 1.2rem 0;
 }
 
 .commands .command_card .user_permissions {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: white;
     background-color: #f50000;
     padding: 0.8rem 1.2rem;
@@ -78,7 +78,7 @@
 }
 
 .commands .command_card .lilly_permissions {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: white;
     background-color: #f50000;
     padding: 0.8rem 1.2rem;
@@ -88,7 +88,7 @@
 }
 
 .commands .command_card .usage {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     background-color: #00a352;
     color: white;
     padding: 0.8rem 1.2rem;
@@ -98,7 +98,7 @@
 }
 
 .commands .command_card .aliases {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     background-color: #00a352;
     color: white;
     padding: 0.8rem 1.2rem;
