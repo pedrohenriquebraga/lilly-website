@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% include "./partials/head.html" %}
+    <meta name="robots" content="noindex, nofollow">
+
+    {% include "./partials/defaultCssFiles.html" %}
+    <link rel="stylesheet" href="/styles/404.css">
+    <link rel="stylesheet preload" href="/styles/responsive.css">
+    <link rel="stylesheet preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    {% include "./partials/header.html" %}
+
+    <main>
+        <section class="content">
+            <h1>Nada por aqui!</h1>
+            <h2>Tem certeza que você está no lugar certo? Acho que não!</h2>
+            <p>Volte a <a href="/" rel="internal">página principal</a> e tente novamente.</p>
+        </section>
+    </main>
+
+    {% include "./partials/footer.html" %}
+</body>
+</html>
