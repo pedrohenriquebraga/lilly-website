@@ -33,6 +33,15 @@ routes.get("/commands", async (req, res) => {
   });
 });
 
+// Rota de Fanarts
+routes.get('/fanarts', (req, res) => {
+  return res.render('fanarts.html', {
+    title: "Fanarts da Lilly",
+    canon: `${config.url}/fanarts`,
+    desc: "Veja algumas fanarts da Lilly feitas por pessoas incríveis!"
+  })
+})
+
 // Convite da Lilly
 routes.get("/invite", (req, res) => {
   return res.redirect(
