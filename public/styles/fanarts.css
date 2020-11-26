@@ -3,7 +3,8 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 90vh;
+    height: 100%;
+    padding: 1.0rem;
 }
 
 main .introduction {
@@ -19,6 +20,7 @@ main .introduction h1 {
 main .introduction p {
     font-size: 1.8rem;
     text-align: center;
+    margin-top: 1.0rem;
 }
 
 main .introduction p a {
@@ -31,26 +33,27 @@ main .introduction p a:hover {
     text-decoration: underline;
 }
 
-main .fanartsContainer {
-    position: absolute;
-    width: 90%;
-    min-width: 300px;
-    background-color: #00000088;
-    padding: 3.0rem;
-    border-radius: 15px;
-    border: 1px solid #fff;
-    margin: 2.0rem 0;
-}
-
-main .fanartsContainer .imagesSlider {
-    position: relative;
-}
-
-main .fanartsContainer img {
-    position: absolute;
+section.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2.0rem;
+    gap: 20px;
     width: 100%;
-    min-width: 250px;
-    margin-bottom: 1.0rem;
+    min-width: 300px;
+    margin-top: 2.0rem;
+}
+
+section.images img {
+    width: 90%;
     border-radius: 8px;
-    object-fit: cover;
+    flex: 1;
+    margin: auto;
+    transition: 200ms;
+}
+
+@media (max-width: 767px) {
+    section.images {
+        display: flex;
+        flex-direction: column;
+    }
 }
