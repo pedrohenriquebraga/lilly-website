@@ -5,12 +5,16 @@
   "main": "server.js",
   "dependencies": {
     "axios": "^0.21.0",
+    "btoa": "^1.2.1",
     "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
     "nunjucks": "^3.2.2"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "nodemon": "^2.0.5"
   },
   "scripts": {

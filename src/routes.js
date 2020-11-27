@@ -1,8 +1,13 @@
+require("dotenv").config();
 const { Router } = require("express");
 const routes = Router();
-const commandsJson = require("../commands.json")
+const commandsJson = require("../commands.json");
 const config = require("../config.json");
 const api = require("./services/api");
+const axios = require("axios");
+const fetch = require("node-fetch");
+
+process.on("unhandledRejection", (error) => console.error(error));
 
 // Rota Principal
 routes.get("/", (req, res) => {
@@ -42,6 +47,36 @@ routes.get("/invite", (req, res) => {
 
 routes.get("/support", (req, res) => {
   return res.redirect("https://discord.gg/SceHNfZ");
+});
+
+routes.get("/auth", async (req, res) => {
+  const accessCode = req.query.code;
+  const data = {
+    client_id: process.env.CLIENT_ID,
+    client_secret: process.env.CLIENT_SECRET,
+    grant_type: "authorization_code",
+    redirect_uri: "http://localhost:3000/auth",
+    code: accessCode,
+    scope: "identify guilds",
+  };
+
+  const userData = await fetch("https://discord.com/api/oauth2/token", {
+    method: "POST",
+    body: new URLSearchParams(data),
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+  })
+    .then((res) => res.json())
+    .then((response) => response);
+
+  await fetch("https://discord.com/api/users/@me", {
+    headers: {
+      authorization: `${userData.token_type} ${userData.access_token}`,
+    },
+  })
+    .then((response) => response.json())
+    .then((response) => res.json(response));
 });
 
 routes.get("/community-terms", (req, res) => {

@@ -5,9 +5,11 @@ const nunjucks = require("nunjucks");
 const compression = require("compression");
 const zlib = require("zlib");
 const routes = require("./routes");
+const cookieParser = require("cookie-parser")
 
 const app = express();
 
+app.use(cookieParser())
 app.use(cors());
 app.disable("x-powered-by");
 app.use(compression({ level: 9 }));
