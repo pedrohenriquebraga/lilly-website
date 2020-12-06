@@ -71,8 +71,13 @@ routes.get("/dashboard", isAuthenticated, (req, res) => {
   });
 });
 
-routes.get("/dashboard/guild/:guildId", (req, res) => {
-  res.send("OK!");
+routes.get("/dashboard/guild/:guildId", isAuthenticated, (req, res) => {
+  return res.render('pages/dashboardGuild.html', {
+    title: "Configure seu servidor na Dashboard",
+    description:
+      "Configure toda a LIlly através do site dela com apenas alguns cliques!",
+    canon: `${config.url}/dashboard/`,
+  })
 });
 
 routes.get("/dashboard/user/:userId", (req, res) => {

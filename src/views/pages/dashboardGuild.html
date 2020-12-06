@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% include "../partials/head.html" %}
+
+    {% include "../partials/defaultCssFiles.html" %}
+    <link rel="stylesheet" href="/styles/pages/dashboardGuild.css">
+    <link rel="stylesheet preload" href="/styles/responsive.css">
+</head>
+<body>
+    {% include "../partials/header.html" %}
+
+    <section >
+        <div class="headerGuild">
+            <img class="guildIcon" src="https://cdn.discordapp.com/icons/755226885503582220/2fd7f01dc25a76621fabd0e27d8ea987.png?size=512" alt="">
+            <p class="guildName">Lilly - Home</p>
+        </div>
+        <hr>
+        <div class="optionsContainer">
+            <div class="options">
+                <a href="#">Configurações Gerais</a>
+                <a href="#">Boas-Vindas e Autoroles</a>
+                <a href="#">Canais</a>
+            </div>
+        </div>
+    </section>
+
+    {% include "../partials/footer.html" %}
+</body>
+</html>

@@ -16,7 +16,6 @@ function verifySelectGuild() {
 async function populateSelect() {
   selectedGuild.disabled = true;
   const userToken = Cookies.get("userToken");
-  // if (!userToken) window.location = `/api/login?redirect=${window.location}`;
   const guilds = await fetch("/api/guilds", {
     headers: {
       authorization: "Bearer " + userToken,
@@ -37,6 +36,12 @@ async function populateSelect() {
   }
 }
 
+function configureGuild() {
+  if (selectedGuild.value)
+    return window.location = `/dashboard/guild/${selectedGuild.value}`
+}
+
 populateSelect();
 selectedGuild.addEventListener("change", verifySelectGuild);
 selectedGuild.addEventListener("load", verifySelectGuild);
+startButton.addEventListener('click', configureGuild)

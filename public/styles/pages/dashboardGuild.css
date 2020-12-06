@@ -1,0 +1,60 @@
+section {
+    margin: 10.0rem auto;
+    width: 80%;
+    min-width: 320px;
+    background-color: #222429;
+    padding: 2.0rem;
+    border-radius: 10px;
+}
+
+.headerGuild {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerGuild img {
+    width: 30.0rem;
+    height: 30.0rem;
+    border-radius: 10px;
+    transition: 200ms;
+}
+
+.headerGuild p {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 1.0rem 0;
+}
+
+.optionsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.0rem;
+}
+
+.optionsContainer .options {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.optionsContainer .options a {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1.0rem;
+    margin-bottom: 0.3rem;
+    background-color: #32343b;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+
+    transition: 200ms;
+}
+
+.optionsContainer .options a:hover {
+    background-color: #2e3036;
+}
