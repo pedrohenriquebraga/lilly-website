@@ -7,6 +7,16 @@ const api = require("../services/api");
 const fetch = require("node-fetch");
 process.on("unhandledRejection", (error) => console.error(error));
 
+function isAuthenticated(req, res, next) {
+  const routePath = req.path
+  const authorization = req.cookies.userToken
+
+  if (!authorization || authorization.length <= 10 || typeof authorization !== "string")
+    return res.redirect(`/api/login?redirect=${routePath}`)
+
+  return next()
+}
+
 // Rota Principal
 routes.get("/", (req, res) => {
   return res.render("pages/index.html", {
@@ -52,7 +62,7 @@ routes.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
-routes.get("/dashboard", (req, res) => {
+routes.get("/dashboard", isAuthenticated, (req, res) => {
   res.render("pages/dashboard.html", {
     title: "Configure seu server na Dashboard da Lilly",
     description:

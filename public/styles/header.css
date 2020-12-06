@@ -26,7 +26,7 @@ header #logo {
 
 header .nav_open_button {
     display: none;
-    font-size: 2.0rem;
+    font-size: 2.5rem;
     margin-right: 1.0rem;
     color: white;
     cursor: pointer;
@@ -41,11 +41,11 @@ header .nav_open_button:hover {
 
 
 header .navigation {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: white;
     font-weight: bold;
     text-decoration: none;
-    padding: 1.5rem;
+    padding: 1.5rem 0.7rem;
     margin: 0.2rem;
 
     transition: 200ms;
@@ -66,6 +66,15 @@ header a button {
 
 header a.login i.logout {
     transform: rotate(180deg)
+}
+
+header .login img {
+    width: 4.0rem;
+    height: 4.0rem;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5rem;
 }
 
 header nav {

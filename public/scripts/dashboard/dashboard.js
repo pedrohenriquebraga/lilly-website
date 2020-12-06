@@ -16,7 +16,7 @@ function verifySelectGuild() {
 async function populateSelect() {
   selectedGuild.disabled = true;
   const userToken = Cookies.get("userToken");
-  if (!userToken) window.location = `/api/login?redirect=${window.location}`;
+  // if (!userToken) window.location = `/api/login?redirect=${window.location}`;
   const guilds = await fetch("/api/guilds", {
     headers: {
       authorization: "Bearer " + userToken,

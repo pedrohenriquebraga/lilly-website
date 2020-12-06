@@ -20,6 +20,6 @@ nunjucks.configure(path.join(__dirname, "views"), {
   express: app,
   noCache: true,
 });
-app.use(routes)
 app.use(ApiRoutes)
+app.use(routes)
 app.listen(process.env.PORT || 3000);
