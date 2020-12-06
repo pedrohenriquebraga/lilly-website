@@ -2,19 +2,15 @@
 <html lang="pt-br">
 
 <head>
-    {% include "./partials/head.html" %}
-    {% include "./partials/defaultCssFiles.html" %}
+    {% include "../partials/head.html" %}
+    {% include "../partials/defaultCssFiles.html" %}
 
-    <link rel="stylesheet preload" as="style" href="/styles/main.css" defer>
+    <link rel="stylesheet preload" as="style" href="/styles/pages/main.css" defer>
     <link rel="stylesheet preload" as="style" href="/styles/responsive.css" defer>
-
-    <link async rel="stylesheet preload" as="style"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer>
-
 </head>
 
 <body>
-    {% include "./partials/header.html" %}
+    {% include "../partials/header.html" %}
     <section id="header">
         <img loading="lazy" src="/assets/avatar-lilly.webp" width="256" height="256" alt="Foto Lilly">
         <h1>Lilly é um bot para o Discord simples, poderoso e cheio de comandos</h1>
@@ -145,7 +141,7 @@
         <section class="section_content"></section>
     </main>
 
-    {% include "./partials/footer.html" %}
+    {% include "../partials/footer.html" %}
 </body>
 
 </html>

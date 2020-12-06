@@ -64,6 +64,10 @@ header a button {
     outline: none;
 }
 
+header a.login i.logout {
+    transform: rotate(180deg)
+}
+
 header nav {
     display: block;
 }

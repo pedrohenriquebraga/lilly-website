@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% include "../partials/head.html" %}
+
+    {% include "../partials/defaultCssFiles.html" %}
+    <link rel="stylesheet" href="/styles/pages/dashboard.css">
+    <link rel="stylesheet preload" href="/styles/responsive.css">
+    <!-- <link rel="stylesheet preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+<body>
+    {% include "../partials/header.html" %}
+
+    <main class="mainContainer">
+        <section class="introduction">
+            <h1>Faça configurações diretamente aqui!</h1>
+            <p>Com a Dashboard da Lilly você pode configurar tudo em um único lugar!</p>
+        </section>
+        <section class="selectContainer">
+            <section href="#" class="selectBox guild">
+                <h2>Servidor</h2>
+                <p>Faça todas as configurações do servidor como mensagens de boas-vindas, autoroles, etc</p>
+                <select name="selectedGuild" id="selectedGuild" required>
+                    <option value="">Selecione um servidor...</option>
+                </select><br>
+                <button class=""><i class="fa fa-cogs"></i> Começar</button>
+            </section>
+        </section>
+    </main>
+
+    {% include "../partials/footer.html" %}
+
+    <script src="/scripts/cookies.js"></script>
+    <script src="/scripts/dashboard/dashboard.js"></script>
+</body>
+</html>

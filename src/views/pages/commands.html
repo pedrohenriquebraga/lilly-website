@@ -2,18 +2,15 @@
 <html lang="pt-br">
 
 <head>
-    {% include "./partials/head.html" %}
-    {% include "./partials/defaultCssFiles.html" %}
+    {% include "../partials/head.html" %}
+    {% include "../partials/defaultCssFiles.html" %}
 
-    <link rel="stylesheet preload" href="/styles/commands.css">
+    <link rel="stylesheet preload" href="/styles/pages/commands.css">
     <link rel="stylesheet preload" href="/styles/responsive.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        defer>
 </head>
 
 <body>
-    {% include "./partials/header.html" %}
+    {% include "../partials/header.html" %}
 
     <section class="content">
         <h1>Veja alguns dos comandos da Lilly</h1>
@@ -42,6 +39,6 @@
         {% endfor %}
     </main>
 
-    {% include "./partials/footer.html" %}
+    {% include "../partials/footer.html" %}
 
 </body>

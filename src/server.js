@@ -6,11 +6,12 @@ const compression = require("compression");
 const zlib = require("zlib");
 const routes = require("./routes");
 const cookieParser = require("cookie-parser")
+const session = require("express-session")
 
 const app = express();
 
-app.use(cookieParser())
 app.use(cors());
+app.use(cookieParser());
 app.disable("x-powered-by");
 app.use(compression({ level: 9 }));
 app.use(express.static(path.join(__dirname, "..", "public")));
@@ -19,6 +20,4 @@ nunjucks.configure(path.join(__dirname, "views"), {
   noCache: true,
 });
 app.use(routes)
-
-
 app.listen(process.env.PORT || 3000);

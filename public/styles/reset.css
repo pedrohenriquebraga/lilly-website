@@ -1,6 +1,9 @@
 :root {
     --main-color: #ff0092;
     --secondary-color: #c70071;
+    --title-color: #576cb8;
+    --link-color: #0add74;
+    --link-hover-color: #08d16c;
 }
 
 html {
@@ -15,7 +18,8 @@ html {
 }
 
 body {
-    height: 100%;
+    /* height: 100%; */
+    /* min-height: 100vh; */
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #131417;
