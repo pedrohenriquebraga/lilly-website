@@ -4,7 +4,8 @@ const path = require("path");
 const nunjucks = require("nunjucks");
 const compression = require("compression");
 const zlib = require("zlib");
-const routes = require("./routes");
+const routes = require("./routes/routes");
+const ApiRoutes = require("./routes/api");
 const cookieParser = require("cookie-parser")
 const session = require("express-session")
 
@@ -20,4 +21,5 @@ nunjucks.configure(path.join(__dirname, "views"), {
   noCache: true,
 });
 app.use(routes)
+app.use(ApiRoutes)
 app.listen(process.env.PORT || 3000);
