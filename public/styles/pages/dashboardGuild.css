@@ -13,6 +13,11 @@ section {
     align-items: center;
 }
 
+.headerGuild h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
 .headerGuild img {
     width: 30.0rem;
     height: 30.0rem;
@@ -42,7 +47,7 @@ section {
 
 .optionsContainer .options a {
     width: 100%;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     padding: 1.0rem;
     margin-bottom: 0.3rem;
     background-color: #32343b;
@@ -57,4 +62,120 @@ section {
 
 .optionsContainer .options a:hover {
     background-color: #2e3036;
+}
+
+
+.configContainer h2 {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.configContainer form {
+    width: 100%;
+    min-width: 300px;
+}
+
+.configContainer form .inputContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1.0rem;
+}
+
+.configContainer form .inputContainer .infos {
+    margin-bottom: 1.0rem;
+}
+
+.configContainer form .inputContainer .infos label {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.configContainer form .inputContainer .infos .description {
+    font-size: 1.3rem;
+    color: #dddddd;
+}
+
+.configContainer form .inputContainer input {
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.configContainer form .inputContainer .checkBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1.5rem;
+}
+
+.configContainer form .inputContainer .checkBox .checkInput {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+    display: none;
+}
+
+.inputContainer .checkBox .newCheckbox {
+    border: #dddddd 1px solid;
+    padding: 0.6rem;
+    border-radius: 8px;
+    vertical-align: middle;
+    font-size: 1.4rem;
+    cursor: pointer;
+    user-select: none;
+    transition: 700ms;
+}
+
+.inputContainer .checkBox .checkInput:checked + .newCheckbox {
+    background-color: #ff0092;
+    border-radius: 50%;
+    animation: rotate-checkbox 650ms ease-in-out;
+    transform: scale(1.3);
+}
+
+.configContainer form .inputContainer .errorMessage {
+    font-size: 1.4rem;
+    color: #fc3939;
+    margin-bottom: 0.5rem;
+    display: none;
+}
+
+.configContainer form .inputContainer.inline {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.configContainer form button {
+    cursor: pointer;
+    padding: 1.0rem 2.0rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #ff0092;
+    color: #fff;
+
+    transition: 200ms;
+}
+
+.configContainer form button:hover {
+    background-color: #f5038c;
+}
+
+@keyframes rotate-checkbox {
+    0%, 100% {
+        transform: rotate(0deg);
+        transform: scale(1.3);
+    }
+
+    50% {
+        transform: rotate(20deg)
+    }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     {% include "../partials/head.html" %}
 
@@ -7,24 +8,69 @@
     <link rel="stylesheet" href="/styles/pages/dashboardGuild.css">
     <link rel="stylesheet preload" href="/styles/responsive.css">
 </head>
+
 <body>
     {% include "../partials/header.html" %}
 
-    <section >
+    <section>
         <div class="headerGuild">
-            <img class="guildIcon" src="https://cdn.discordapp.com/icons/755226885503582220/2fd7f01dc25a76621fabd0e27d8ea987.png?size=512" alt="">
+            <h1>Configurações do servidor</h1>
+            <img class="guildIcon"
+                src="https://cdn.discordapp.com/icons/755226885503582220/2fd7f01dc25a76621fabd0e27d8ea987.png?size=512"
+                alt="">
             <p class="guildName">Lilly - Home</p>
         </div>
         <hr>
         <div class="optionsContainer">
             <div class="options">
-                <a href="#">Configurações Gerais</a>
-                <a href="#">Boas-Vindas e Autoroles</a>
-                <a href="#">Canais</a>
+                <a href="#settings"><i class="fa fa-cogs"></i> Configurações Gerais</a>
+                <a href="#"><i class="fa fa-id-badge"></i> Boas-Vindas e Autoroles</a>
+                <a href="#"><i class="fa fa-hashtag"></i> Canais</a>
             </div>
         </div>
     </section>
 
+    <main>
+        <section class="configContainer" id="settings">
+            <h2><i class="fa fa-cogs"></i> Configurações Gerais</h2>
+            <form action="get">
+                <div class="inputContainer">
+                    <div class="infos">
+                        <label for="prefix">Prefixo do servidor</label>
+                        <p class="description">Você pode personalizar o prefixo da Lilly. <strong>O prefixo deve ter no máximo 10 caracteres.</strong></p>
+                    </div>
+                    <input type="text" value="$" name="prefix" id="prefix" minlength="1"
+                        maxlength="10">
+                    <p class="errorMessage actives prefix">Prefixo inválido</p>
+                </div>
+                <div class="inputContainer inline">
+                    <div class="infos">
+                        <label for="delCommands">Deletar mensagens de comandos</label>
+                        <p class="description">Ao digitar comandos da Lilly você pode escolher se às mensagens do comando serão apagadas ou não!</p>
+                    </div>
+                    <div class="checkBox">
+                        <input type="checkbox" name="deleteCommands" id="delCommands" class="checkInput">
+                        <label for="delCommands" class="newCheckbox"><i class="fa fa-check"></i></label>
+                    </div>
+                </div>
+                <div class="inputContainer inline">
+                    <div class="infos">
+                        <label for="unkCommands">Avisar por comandos desconhecidos</label>
+                        <p class="description">Você pode escolher avisar ou não membros ao digitar comandos desconhecidos.</p>
+                    </div>
+                    <div class="checkBox">
+                        <input type="checkbox" name="unkCommands" id="unkCommands" class="checkInput">
+                        <label for="unkCommands" class="newCheckbox"><i class="fa fa-check"></i></label>
+                    </div>
+                </div>
+
+                <button type="button" class="saveButton">Salvar</button>
+            </form>
+        </section>
+    </main>
+
     {% include "../partials/footer.html" %}
+    <script src="/scripts/dashboard/dashboardInfos.js"></script>
 </body>
+
 </html>
