@@ -1,6 +1,8 @@
 const { Router } = require("express");
+const { readdirSync } = require("fs");
+const { join } = require("path");
 const routes = Router();
-const commandsJson = require("../commands.json")
+const commandsJson = require("../commands.json");
 const config = require("../config.json");
 const api = require("./services/api");
 
@@ -34,13 +36,21 @@ routes.get("/commands", async (req, res) => {
 });
 
 // Rota de Fanarts
-routes.get('/fanarts', (req, res) => {
-  return res.render('fanarts.html', {
+routes.get("/fanarts", (req, res) => {
+  const fanarts = [];
+  const files = readdirSync(
+    join(__dirname, "..", "public", "assets", "fanarts")
+  ).filter((file) => file.endsWith(".webp"));
+
+  files.map((file) => fanarts.push(`/assets/fanarts/${file}`));
+
+  return res.render("fanarts.html", {
     title: "Fanarts da Lilly",
     canon: `${config.url}/fanarts`,
-    desc: "Veja algumas fanarts da Lilly feitas por pessoas incríveis!"
-  })
-})
+    fanarts,
+    desc: "Veja algumas fanarts da Lilly feitas por pessoas incríveis!",
+  });
+});
 
 // Convite da Lilly
 routes.get("/invite", (req, res) => {

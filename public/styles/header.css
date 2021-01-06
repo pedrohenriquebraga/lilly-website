@@ -26,7 +26,7 @@ header #logo {
 
 header .nav_open_button {
     display: none;
-    font-size: 2.0rem;
+    font-size: 2.5rem;
     margin-right: 1.0rem;
     color: white;
     cursor: pointer;
