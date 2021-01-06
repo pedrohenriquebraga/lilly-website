@@ -1,0 +1,59 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1.0rem;
+}
+
+main .introduction {
+    margin-top: 10.0rem;
+}
+
+main .introduction h1 {
+    font-size: 2.5rem;
+    color: #576cb8;
+    text-align: center;
+}
+
+main .introduction p {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 1.0rem;
+}
+
+main .introduction p a {
+    color: #08d16c;
+    text-decoration: none;
+}
+
+main .introduction p a:hover {
+    color: #0add74;
+    text-decoration: underline;
+}
+
+section.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2.0rem;
+    gap: 20px;
+    width: 100%;
+    min-width: 300px;
+    margin-top: 2.0rem;
+}
+
+section.images img {
+    width: 90%;
+    border-radius: 8px;
+    flex: 1;
+    margin: auto;
+    transition: 200ms;
+}
+
+@media (max-width: 767px) {
+    section.images {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,6 +1,8 @@
 const { Router } = require("express");
+const { readdirSync } = require("fs");
+const { join } = require("path");
 const routes = Router();
-const commandsJson = require("../commands.json")
+const commandsJson = require("../commands.json");
 const config = require("../config.json");
 const api = require("./services/api");
 
@@ -30,6 +32,23 @@ routes.get("/commands", async (req, res) => {
       "Veja a lista completa de comandos da Lilly sempre atualizada e cheia de comandos realmente úteis para você!",
     commands: commands,
     total: commands.length,
+  });
+});
+
+// Rota de Fanarts
+routes.get("/fanarts", (req, res) => {
+  const fanarts = [];
+  const files = readdirSync(
+    join(__dirname, "..", "public", "assets", "fanarts")
+  ).filter((file) => file.endsWith(".webp"));
+
+  files.map((file) => fanarts.push(`/assets/fanarts/${file}`));
+
+  return res.render("fanarts.html", {
+    title: "Fanarts da Lilly",
+    canon: `${config.url}/fanarts`,
+    fanarts,
+    desc: "Veja algumas fanarts da Lilly feitas por pessoas incríveis!",
   });
 });
 
